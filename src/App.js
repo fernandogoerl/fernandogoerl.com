@@ -1,51 +1,56 @@
 import React, { Component } from 'react'
-import logo from './logo.svg'
-import './App.css'
-import * as api from './api'
-import styled from 'styled-components'
+import { Route } from 'react-router-dom'
 
-const Block = styled.div`
-	width: 100px;
-	height: 100px;
-	background-color: red;
-`
+import Home from './pages/Home'
+
+import Test from './pages/Test'
+import Header from './components/Header'
+
+import { withStyles } from '@material-ui/styles'
+
+
+const styles = {
+	App: {
+		width: '100%',
+		display: 'flex',
+		flexDirection: 'column',
+	},
+}
+
 
 class App extends Component {
 
 	state = {
-		greeting: '',
-		mySkills: {},
+		scroll: 0
 	}
 
-	componentDidMount () {
-		api.getGreeting().then((greeting) =>
-			this.setState({ greeting })
-		)
-		api.getSkills().then((mySkills) =>
-			this.setState({ mySkills })
-		)
+	componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll)
 	}
 
+	componentWillUnmount() {
+		window.removeEventListener('scroll', this.handleScroll)
+	}
+
+	handleScroll = (event) => {
+			let scroll = document.documentElement.scrollTop
+			this.setState({scroll})
+	}
+
+	setScroll = (scroll) => this.setState({scroll})
 
   render() {
-		const { greeting, mySkills } = this.state
+		const { classes } = this.props
+		const { scroll } = this.state
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-					<Block/>
-          <p>
-            {greeting}
-          </p>
-					<ul>{
-						Object.keys(mySkills).map(skill => (
-							<li>{skill} - {mySkills[skill]}</li>
-						))
-					}</ul>
-        </header>
+      <div className={classes.App}>
+        <Header scroll={scroll} />
+				<Route exact path='/' render={() => (<Home/>)}/>
+				<Route path='/teste' component={Test}/>
+
       </div>
     )
   }
 }
 
-export default App
+export default withStyles(styles)(App)

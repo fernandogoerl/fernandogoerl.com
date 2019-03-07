@@ -2,7 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+		<link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
@@ -22,7 +23,37 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+		<title>React App</title>
+
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<style>
+      html,
+			body,
+			.root {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+				font-size: 18px;
+				font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Open Sans", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+        background: #1D1C24;
+        color: #FFF;
+        -webkit-font-smoothing: antialiased;
+        -moz-font-smoothing: antialiased;
+        -ms-font-smoothing: antialiased;
+				font-weight: 300;
+				letter-spacing: 0.1em;
+			}
+			::selection {
+				background-color: #80e27e;
+				color: white;
+			}
+
+			code {
+				font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+					monospace;
+			}
+    </style>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>

@@ -1,0 +1,33 @@
+import React, { Component } from 'react'
+
+import { withStyles } from '@material-ui/styles'
+
+
+import Hero from '../containers/Hero'
+import Experience from '../containers/Experience'
+import Skills from '../containers/Skills'
+
+class Home extends Component {
+
+	render() {
+		const { classes } = this.props
+		return (
+			<div className={classes.Page} id='home'>
+				<Hero id='hero'/>
+				<Experience id='experience'/>
+				<Skills id='skills'/>
+			</div>
+		)
+	}
+}
+
+const styles = {
+	Page: {
+		flex: 1,
+		width: '100%',
+		display: 'flex',
+		flexDirection: 'column',
+	},
+}
+
+export default withStyles(styles)(Home)
