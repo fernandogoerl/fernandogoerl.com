@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { withStyles } from '@material-ui/styles'
 
-import { colors }  from '../style'
+import { colors }  from '../helpers'
 
 
 class SectionTitle extends Component {

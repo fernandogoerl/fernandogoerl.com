@@ -4,7 +4,7 @@ import { withStyles } from '@material-ui/core'
 
 import { LinearProgress } from '@material-ui/core'
 
-import { colors } from '../style'
+import { colors } from '../helpers'
 
 class SkillProgress extends Component {
 

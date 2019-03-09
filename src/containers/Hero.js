@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import { withStyles } from '@material-ui/styles'
 
-import { colors, customTheme } from '../style'
+import { colors, customTheme, functions } from '../helpers'
 
 import ImageHero from '../img/image.hero.png'
 
@@ -23,13 +23,14 @@ class Hero extends Component {
 						<br/>
 						Web Developer
 					</h2>
-					If you want to hire me
-					<div className={classes.ScrollDownButton}>
+					<div>If you want to hire me</div>
+					<a className={classes.ScrollDownButton} onClick={event => functions.scrollTo('contact', event)} href="#contact" >
 						<span className={classes.Primary}>Scroll down</span>
 						<br/>
 						<span className={classes.Arrow}>&darr;</span>
-					</div>
+					</a>
 				</div>
+
 				<div className={classes.ImageContainer}>
 					<div className={classes.ImageBackground}></div>
 					<img src={ImageHero} className={classes.ImageHero} alt="logo" />
@@ -72,7 +73,6 @@ const styles = theme => ({
 	TextContainer: {
 		flex: 5,
 		minWidth: 600,
-
 	},
 	Title: {
 		fontSize: 75,
@@ -96,7 +96,6 @@ const styles = theme => ({
 		marginBottom: -725,
 		marginRight: -25,
 		marginLeft: 25,
-
 	},
 	ImageHero: {
 		height: 700,
@@ -109,14 +108,18 @@ const styles = theme => ({
 	},
 	ScrollDownButton: {
 		paddingTop: 5,
-		width: 100,
+		textTransform: 'none',
+		textDecoration: 'none',
+		display: 'inline-block',
+		color: colors.white,
 		'&:hover': {
 			color: colors.lightPrimary,
-			cursor: 'pointer'
+			cursor: 'pointer',
 		},
 	},
 	Arrow: {
-		paddingLeft: 10,
+		color: 'inherit',
+		paddingLeft: 20,
 		fontSize: '3em',
 	},
 })

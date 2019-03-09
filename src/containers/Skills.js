@@ -6,7 +6,7 @@ import SkillProgress from '../components/SkillProgress'
 import Section from '../components/Section'
 
 
-import { colors } from '../style'
+import { colors } from '../helpers'
 import FlexBlock from '../components/FlexBlock'
 
 
@@ -26,29 +26,21 @@ class Skills extends Component {
 		const { mySkills } = this.state
 		const { classes, id } = this.props
 		return (
-			<Section name='skills' align='right' id={id}>
-				<div className={classes.InnerContainer}>
-					{Object.keys(mySkills).map(category => (
-						<FlexBlock key={category}>
-							<div className={classes.Category}>{category}</div>
-							{Object.keys(mySkills[category]).map(skillName => (
-								<SkillProgress key={skillName} progress={mySkills[category][skillName]} skillName={skillName}/>
-							))}
-						</FlexBlock>
-					))}
-				</div>
+			<Section name={id} align='right' id={id} flex={true}>
+				{Object.keys(mySkills).map(category => (
+					<FlexBlock key={category}>
+						<div className={classes.Category}>{category}</div>
+						{Object.keys(mySkills[category]).map(skillName => (
+							<SkillProgress key={skillName} progress={mySkills[category][skillName]} skillName={skillName}/>
+						))}
+					</FlexBlock>
+				))}
 			</Section>
 		)
 	}
 }
 
 const styles = {
-	InnerContainer: {
-		display: 'flex',
-		alignItems: 'center',
-		justifyContent: 'space-evenly',
-		flexWrap: 'wrap'
-	},
 	Category: {
 		textTransform: 'uppercase',
 		fontWeight: 500,

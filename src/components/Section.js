@@ -5,11 +5,18 @@ import SectionTitle from './SectionTitle'
 
 class Section extends Component {
 	render() {
-		const { classes, children, name, align, id } = this.props
+		const { classes, children, name, align, id, flex } = this.props
 		return (
 			<div className={classes.Container} id={id}>
 				<SectionTitle name={name} align={align}/>
-				{children}
+				{flex
+				? (
+					<div className={classes.InnerContainer}>
+						{children}
+					</div>
+				) : (
+					children
+				)}
 			</div>
 		)
 	}
@@ -21,6 +28,12 @@ const styles = {
 		flex: 1,
 		width: '100%',
 		paddingTop: 100,
+	},
+	InnerContainer: {
+		display: 'flex',
+		alignItems: 'center',
+		justifyContent: 'space-evenly',
+		flexWrap: 'wrap',
 	},
 }
 

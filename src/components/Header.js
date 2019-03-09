@@ -4,17 +4,12 @@ import Logo from '../img/logo.03.green.gradient.png'
 
 import { withStyles } from '@material-ui/styles'
 
-import colors from '../style/colors'
+import { colors, functions } from '../helpers'
 
 
 
 class Header extends Component {
 
-	scrollTo = (id, event) => {
-		event.preventDefault()
-		document.getElementById(id).scrollIntoView({behavior: 'smooth', block: 'start'})
-
-	}
 	render() {
 		const { classes, scroll } = this.props
 
@@ -24,9 +19,10 @@ class Header extends Component {
 					<img src={Logo} className={classes.Logo} alt="logo" />
 				</div>
 				<div className={classes.Nav}>
-					<a className={classes.Link} onClick={event => this.scrollTo('hero', event)} href="#home" >Home</a>
-					<a className={classes.Link} onClick={event => this.scrollTo('experience', event)} href="#experience" >Experience</a>
-					<a className={classes.Link} onClick={event => this.scrollTo('skills', event)} href="#skills" >Skills</a>
+					<a className={classes.Link} onClick={event => functions.scrollTo('hero', event)} href="#home" >Home</a>
+					<a className={classes.Link} onClick={event => functions.scrollTo('experience', event)} href="#experience" >Experience</a>
+					<a className={classes.Link} onClick={event => functions.scrollTo('education', event)} href="#education" >Education</a>
+					<a className={classes.Link} onClick={event => functions.scrollTo('skills', event)} href="#skills" >Skills</a>
 					<a className={classes.Link} href="#contact" >Contact</a>
 					{/* <Link className={classes.Link} to="/#aboutme" >About Me</Link> */}
 				</div>

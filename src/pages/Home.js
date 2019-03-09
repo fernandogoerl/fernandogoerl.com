@@ -6,6 +6,7 @@ import { withStyles } from '@material-ui/styles'
 import Hero from '../containers/Hero'
 import Experience from '../containers/Experience'
 import Skills from '../containers/Skills'
+import Education from '../containers/Education'
 
 class Home extends Component {
 
@@ -15,6 +16,7 @@ class Home extends Component {
 			<div className={classes.Page} id='home'>
 				<Hero id='hero'/>
 				<Experience id='experience'/>
+				<Education id='education'/>
 				<Skills id='skills'/>
 			</div>
 		)

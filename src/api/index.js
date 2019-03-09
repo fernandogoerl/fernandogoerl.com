@@ -44,20 +44,23 @@ export const getEducation = () => (
 	// 	})
 	new Promise( (res, rej) =>
 		res({
-			'2013 - 2016': {
-				Company: 'SORTIMENTOS',
-				JobTitle: 'Web Developer',
-				Description: `The Sortimentos Group is an online news aggregator focusing mainly on Technology, Entretainment and Fashion. I worked as a Web Developer, using technologies such as HTML5, CSS3, Javascript, JQuery and GIT.`,
+			'Udacity': {
+				Icon: 'diploma',
+				Subject: 'React Development',
+				Degree: 'Nanodegree',
+				Url: 'https://confirm.udacity.com/S26GKUJ',
 			},
-			'2017 - 2018': {
-				Company: 'NUMO COMPANY',
-				JobTitle: 'Front-end Developer',
-				Description: `Numo is a startup that develops mobile apps and websites. At Numo Company, I worked as Front-end Developer. All projects were build with Angular or React Frameworks, using GIT and Agile methodologies.`,
+			'Faculdade Senac': {
+				Icon: 'diploma',
+				Subject: 'Multimedia Producer',
+				Degree: 'College Diploma',
+				Url: '/Fernando-Goerl-diploma-senac.pdf',
 			},
-			'2018 - 2019': {
-				Company: 'RCA DIGITAL',
-				JobTitle: 'Front-end Developer',
-				Description: `RCA Digital is a Software Development company, where I worked as a Front‑End Developer, mostly on Angular 2+ SPAs, with Sass and Bootstrap for stylization and GIT for version management.`,
+			'Alura': {
+				Icon: 'course',
+				Subject: 'Front-end Developer',
+				Degree: 'Online Course',
+				Url: 'https://cursos.alura.com.br/career/certificate/486813c5-aa3d-4586-b89f-71350d7b8027',
 			},
 		}))
 )
