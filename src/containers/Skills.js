@@ -28,7 +28,7 @@ class Skills extends Component {
 		return (
 			<Section name={id} align='right' id={id} flex={true}>
 				{Object.keys(mySkills).map(category => (
-					<FlexBlock key={category}>
+					<FlexBlock key={category} size='large'>
 						<div className={classes.Category}>{category}</div>
 						{Object.keys(mySkills[category]).map(skillName => (
 							<SkillProgress key={skillName} progress={mySkills[category][skillName]} skillName={skillName}/>

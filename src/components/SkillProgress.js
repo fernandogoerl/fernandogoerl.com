@@ -13,7 +13,7 @@ class SkillProgress extends Component {
 	}
 
 	componentDidMount() {
-    this.timer = setInterval(this.progress, 100)
+    this.timer = setInterval(this.progress, 10)
   }
 
   componentWillUnmount() {
@@ -21,10 +21,8 @@ class SkillProgress extends Component {
   }
 
   progress = () => {
-		const { completed } = this.state
-		const { progress } = this.props
-    if (completed < progress) {
-      this.setState({ completed: completed + 5 })
+    if (this.state.completed < this.props.progress) {
+      this.setState({ completed: this.state.completed + 2 })
     }
 	}
 
@@ -52,11 +50,11 @@ const styles = {
 		alignItems: 'center',
 		justifyContent: 'space-between',
     flexDirection: 'row',
-    paddingTop: 10,
-    paddingBottom: 10,
+    paddingTop: 15,
+    paddingBottom: 15,
 	},
 	SkillName: {
-		minWidth: 225,
+		minWidth: 205,
 	},
 	Progress: {
 		backgroundColor: colors.lightPrimary,

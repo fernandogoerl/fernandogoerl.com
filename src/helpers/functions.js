@@ -1,8 +1,11 @@
+import history from '../config/history'
+
 const scrollTo = (id, event) => {
-	event.preventDefault()
+	if(event) event.preventDefault()
 	document.getElementById(id).scrollIntoView({behavior: 'smooth', block: 'start'})
-	Location.href = document.URL + id
-	console.log(Location.href);
+	if(id !== 'hero') {
+		history.push(`#${id}`)
+	} else history.push('')
 
 }
 

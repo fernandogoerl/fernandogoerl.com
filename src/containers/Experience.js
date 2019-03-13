@@ -24,7 +24,7 @@ class Experience extends Component {
 		return (
 			<Section name={id} align='right' id={id} flex={true}>
 				{Object.keys(myExp).map(year => (
-					<FlexBlock key={year}>
+					<FlexBlock key={year} size='large'>
 						<div className={classes.Year}>{year}</div>
 						<div className={classes.JobTitle}>{myExp[year].JobTitle} at {myExp[year].Company}</div>
 						<div className={classes.Description}>{myExp[year].Description}</div>

@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
 
-export default class Test extends Component {
+export class Skype extends Component {
 	render() {
 		return (
 			<div>
-				Component Test
+
 			</div>
 		)
 	}
 }
+
+export default Skype

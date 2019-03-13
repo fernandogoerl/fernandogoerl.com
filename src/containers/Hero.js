@@ -51,7 +51,6 @@ const styles = theme => ({
 		justifyContent: 'space-around',
 		flexWrap: 'wrap',
 		minHeight: '90vh',
-		marginBottom: 100,
 		'@media (max-width: 1500px)': {
 			paddingLeft: 100,
 			paddingRight: 100,
@@ -85,7 +84,7 @@ const styles = theme => ({
 	ImageContainer: {
 		flex: 3,
 		padding: 50,
-		'@media (max-width: 1420px)': {
+		'@media (max-width: 1450px)': {
 			display: 'none',
 		},
 	},

@@ -7,8 +7,11 @@ import { withStyles } from '@material-ui/styles'
 import { colors, functions } from '../helpers'
 
 
-
 class Header extends Component {
+
+	componentDidMount() {
+		functions.scrollTo('hero', this.event)
+	}
 
 	render() {
 		const { classes, scroll } = this.props
@@ -23,7 +26,8 @@ class Header extends Component {
 					<a className={classes.Link} onClick={event => functions.scrollTo('experience', event)} href="#experience" >Experience</a>
 					<a className={classes.Link} onClick={event => functions.scrollTo('education', event)} href="#education" >Education</a>
 					<a className={classes.Link} onClick={event => functions.scrollTo('skills', event)} href="#skills" >Skills</a>
-					<a className={classes.Link} href="#contact" >Contact</a>
+					<a className={classes.Link} onClick={event => functions.scrollTo('my_work', event)} href="#my_work" >My Work</a>
+					<a className={classes.Link} onClick={event => functions.scrollTo('contact_me', event)} href="#contact_me" >Contact Me</a>
 					{/* <Link className={classes.Link} to="/#aboutme" >About Me</Link> */}
 				</div>
 
@@ -42,6 +46,7 @@ const styles = {
 		alignItems: 'center',
 		color: 'white',
 		padding: 20,
+		zIndex: 100,
 	},
 	FixedPosition: {
 		backgroundColor: colors.bg,

@@ -19,11 +19,14 @@ class SectionTitle extends Component {
 
 const styles = {
 	SectionTitle: {
-		fontSize: 150,
+		fontSize: 180,
 		fontWeight: 600,
 		color: colors.lightbg,
 		zIndex: -10,
 		marginBottom: -30,
+		'@media (max-width: 1500px)': {
+			fontSize: 120,
+		},
 		'@media (max-width: 1200px)': {
 			fontSize: 120,
 		},

@@ -10,6 +10,11 @@
 //     .then(data => data.book)
 
 
+import WorkImageReact from '../img/work.image.react.png'
+import WorkImageGames from '../img/work.image.games.png'
+import WorkImageWebsites from '../img/work.image.websites.png'
+import Diploma from '../docs/Fernando-Goerl-diploma-senac.pdf'
+
 export const getExp = () => (
 	// fetch(`${api}/experience`, { headers })
 	//   .then(res => res.json())
@@ -54,7 +59,7 @@ export const getEducation = () => (
 				Icon: 'diploma',
 				Subject: 'Multimedia Producer',
 				Degree: 'College Diploma',
-				Url: '/Fernando-Goerl-diploma-senac.pdf',
+				Url: Diploma,
 			},
 			'Alura': {
 				Icon: 'course',
@@ -98,6 +103,69 @@ export const getSkills = () => (
 				'Agile Methodologies' : 60,
 			},
 		}))
+)
+
+export const getWork = () => (
+  // fetch(`${api}/work`, { headers })
+  //   .then(res => res.json())
+	// 	.then(data => {
+	// 		return data.skills
+	// 	})
+	new Promise( (res, rej) =>
+		res([
+			{
+				Name : 'My Reads',
+				Category: 'React Development Project',
+				Description: "This is a personal bookshelfs manager app created for Udacity's React Developer Nanodegree. It can manage books into three shelves: Reading, Want to Read and Read.",
+				Image: WorkImageReact,
+				Url: 'https://fernandogoerl.github.io/myreads-app/',
+			},
+			{
+				Name : 'Matemax',
+				Category: 'Game Development',
+				Description: "Matemax is an Educational Game that teaches math and multiplication. I was responsible for the level design and development of the game.",
+				Image: WorkImageGames,
+				Url: 'https://ensinocriativo.com.br/games/matemax',
+			},
+			{
+				Name : 'Numo, FIPS, Hauskin and more',
+				Category: 'E-commerce and Websites',
+				Description: "I've worked for many years developing websites using HTML, CSS and WordPress. You can see a sample of my work on Hauskin's website.",
+				Image: WorkImageWebsites,
+				Url: 'http://hauskin.com.br/',
+			},
+		]))
+)
+
+export const getContacts = () => (
+  // fetch(`${api}/contacts`, { headers })
+  //   .then(res => res.json())
+	// 	.then(data => {
+	// 		return data.skills
+	// 	})
+	new Promise( (res, rej) =>
+		res([
+			{
+				Type : 'Mobile phone',
+				Info : '+55 51 99993-3460',
+				Url : 'tel:+5551999933460',
+			},
+			{
+				Type : 'Skype',
+				Info : 'Fernando Goerl (fernandogoerl)',
+				Url : 'skype:fernandogoerl?add',
+			},
+			{
+				Type : 'E-mail address',
+				Info : 'fernandogoerl@gmail.com',
+				Url : 'mailto:fernandogoerl@gmail.com',
+			},
+			{
+				Type : 'LinkedIn',
+				Info : 'Fernando Goerl',
+				Url : 'https://www.linkedin.com/in/fernandogoerl/',
+			},
+		]))
 )
 
 

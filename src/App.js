@@ -2,8 +2,7 @@ import React, { Component } from 'react'
 import { Route } from 'react-router-dom'
 
 import Home from './pages/Home'
-
-import Test from './pages/Test'
+import Skype from './pages/Skype'
 import Header from './components/Header'
 
 import { withStyles } from '@material-ui/styles'
@@ -25,7 +24,7 @@ class App extends Component {
 	}
 
 	componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll)
+		window.addEventListener('scroll', this.handleScroll)
 	}
 
 	componentWillUnmount() {
@@ -46,7 +45,7 @@ class App extends Component {
       <div className={classes.App}>
         <Header scroll={scroll} />
 				<Route exact path='/' render={() => (<Home/>)}/>
-				<Route path='/teste' component={Test}/>
+				<Route path='/skype' component={Skype}/>
 
       </div>
     )
