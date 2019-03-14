@@ -24,7 +24,7 @@ class Hero extends Component {
 						Web Developer
 					</h2>
 					<div>If you want to hire me</div>
-					<a className={classes.ScrollDownButton} onClick={event => functions.scrollTo('contact', event)} href="#contact" >
+					<a className={classes.ScrollDownButton} onClick={event => functions.scrollTo('contact_me', event)} href="#contact" >
 						<span className={classes.Primary}>Scroll down</span>
 						<br/>
 						<span className={classes.Arrow}>&darr;</span>

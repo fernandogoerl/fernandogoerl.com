@@ -55,11 +55,13 @@ export class Contact extends Component {
 					<div className={classes.ChannelsContainer}>
 						{myChannels.map((channel) => (
 							<FlexBlock key={channel.Type} size='full'>
-								<div className={classes.IconContainer}>{this.setIcon(channel.Type)}</div>
-								<div className={classes.InfoContainer}>
-									<span className={classes.Info}>{channel.Info}</span>
-									<span className={classes.Info}>{channel.Type}</span>
-								</div>
+								<a href={channel.Url}>
+									<div className={classes.IconContainer}>{this.setIcon(channel.Type)}</div>
+									<div className={classes.InfoContainer}>
+										<span className={classes.Info}>{channel.Info}</span>
+										<span className={classes.Info}>{channel.Type}</span>
+									</div>
+								</a>
 							</FlexBlock>
 						))}
 					</div>
@@ -113,6 +115,7 @@ const styles = {
 		padding: 20,
 		minWidth: 170,
 		verticalAlign: 'super',
+		color: colors.white,
 	},
 	Info: {
 		display: 'block'

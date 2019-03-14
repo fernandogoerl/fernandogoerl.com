@@ -4,6 +4,7 @@ import { Route } from 'react-router-dom'
 import Home from './pages/Home'
 import Skype from './pages/Skype'
 import Header from './components/Header'
+import BackToTop from './components/BackToTop'
 
 import { withStyles } from '@material-ui/styles'
 
@@ -46,7 +47,7 @@ class App extends Component {
         <Header scroll={scroll} />
 				<Route exact path='/' render={() => (<Home/>)}/>
 				<Route path='/skype' component={Skype}/>
-
+				<BackToTop scroll={scroll}/>
       </div>
     )
   }
