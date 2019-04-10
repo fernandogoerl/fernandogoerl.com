@@ -4,7 +4,7 @@ import { withStyles } from '@material-ui/styles'
 
 import { colors, customTheme, functions } from '../helpers'
 
-import ImageHero from '../img/image.hero.png'
+import ImageHero from '../img/image.hero.jpg'
 
 class Hero extends Component {
 	render() {
@@ -51,7 +51,7 @@ const styles = theme => ({
 		justifyContent: 'space-around',
 		flexWrap: 'wrap',
 		minHeight: '90vh',
-		'@media (max-width: 1500px)': {
+		'@media (min-width: 800px) and (max-width: 1500px)': {
 			paddingLeft: 100,
 			paddingRight: 100,
 		},
@@ -71,12 +71,20 @@ const styles = theme => ({
 	},
 	TextContainer: {
 		flex: 5,
-		minWidth: 600,
+		paddingLeft: 20,
+		'@media (min-width: 800px)': {
+			minWidth: 600,
+			paddingLeft: 0,
+		},
 	},
 	Title: {
 		fontSize: 75,
-		minWidth: 500,
+		// minWidth: 500,
 		wordWrap: 'normal',
+		'@media (max-width: 800px)': {
+			fontSize: 50,
+
+		},
 	},
 	Primary: {
 		color: colors.lightPrimary,

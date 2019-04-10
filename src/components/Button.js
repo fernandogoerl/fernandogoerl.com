@@ -36,6 +36,7 @@ const styles = {
 		textDecoration: 'none',
 		fontSize: 18,
 		fontWeight: 400,
+		whiteSpace:'nowrap',
 		'&:hover': {
 			color: colors.white,
 			backgroundColor: colors.primary,

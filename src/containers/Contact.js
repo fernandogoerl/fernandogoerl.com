@@ -54,7 +54,7 @@ export class Contact extends Component {
 					</div>
 					<div className={classes.ChannelsContainer}>
 						{myChannels.map((channel) => (
-							<FlexBlock key={channel.Type} size='full'>
+							<FlexBlock key={channel.Type} size='even'>
 								<a href={channel.Url}>
 									<div className={classes.IconContainer}>{this.setIcon(channel.Type)}</div>
 									<div className={classes.InfoContainer}>
@@ -78,10 +78,16 @@ const styles = {
 		alignItems: 'left',
 		margin: 50,
 		marginTop: 100,
+		'@media (max-width: 500px)': {
+			margin: 25,
+		}
 	},
 	MainText: {
 		fontSize: 50,
 		fontWeight: 400,
+		'@media (max-width: 550px)': {
+			fontSize: 32,
+		},
 	},
 	SubText: {
 		paddingTop: 20,
@@ -101,13 +107,12 @@ const styles = {
 	IconContainer: {
 		display: 'inline-block',
 	},
-	BigIcon: {
-		color: colors.lightPrimary,
-		fontSize: 42,
-	},
 	Icon: {
 		color: colors.lightPrimary,
 		fontSize: 50,
+		'@media (max-width: 550px)': {
+			fontSize: 32,
+		},
 	},
 	InfoContainer: {
 		display: 'inline-block',
@@ -116,6 +121,10 @@ const styles = {
 		minWidth: 170,
 		verticalAlign: 'super',
 		color: colors.white,
+		'@media (max-width: 550px)': {
+			fontSize: 14,
+			padding: 10,
+		},
 	},
 	Info: {
 		display: 'block'

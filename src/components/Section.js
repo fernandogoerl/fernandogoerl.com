@@ -29,6 +29,9 @@ const styles = {
 		width: '100%',
 		paddingTop: 100,
 		paddingBottom: 50,
+		'@media (max-width: 700px)': {
+			paddingTop: 50,
+		},
 	},
 	InnerContainer: {
 		display: 'flex',

@@ -43,9 +43,15 @@ class Work extends Component {
 						</div>
 					</FlexBlock>
 				))}
-				<div className={classes.GitHubCTA}>
-					<span>Access my GitHub profile to see more about my work!</span>
-					<Button type='primary' text='Go to Github' link='https://github.com/fernandogoerl' withArrow={true} />
+				<div>
+					<div className={classes.GitHubCTA}>
+						<span>Access my GitHub profile to see more about my work!</span>
+						<Button type='primary' text='Go to Github' link='https://github.com/fernandogoerl' withArrow={true} />
+					</div>
+					<div className={classes.SmallText}>
+						A lot of my work is private due to confidentiality contracts.<br/>
+						If you want to know more about my projects and my work, please contact me.
+					</div>
 				</div>
 			</Section>
 		)
@@ -62,16 +68,23 @@ const styles = {
     alignItems: 'center',
 	},
 	Image: {
-		width: 470,
-		height: 320,
+		maxWidth: 470,
 		marginBottom: -290,
+		'@media (max-width: 500px)': {
+			width: 350,
+			marginBottom: -218,
+		},
 	},
 	ImageBackground: {
 		backgroundColor: colors.lightbg,
 		width: 470,
 		height: 320,
 		zIndex: -10,
-		marginLeft: 60,
+		marginLeft: 40,
+		'@media (max-width: 500px)': {
+			width: 350,
+			height: 238,
+		},
 	},
 	Category: {
 		fontWeight: 500,
@@ -92,11 +105,23 @@ const styles = {
 	GitHubCTA: {
 		display: 'flex',
 		alignItems: 'center',
-		padding: 50,
+		paddingTop: 50,
+		paddingLeft: 50,
+		paddingRight: 50,
 		fontSize: 28,
 		fontWeight: 500,
+		'@media (max-width: 700px)': {
+			display: 'block',
+			textAlign: 'center',
+			paddingLeft: 40,
+			paddingRight: 40,
+		},
 	},
-
+	SmallText: {
+		padding: 10,
+		fontSize: 12,
+		textAlign: 'center',
+	},
 }
 
 export default withStyles(styles)(Work)

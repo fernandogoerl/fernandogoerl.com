@@ -33,6 +33,9 @@ const styles = {
 			backgroundColor: colors.primary,
 			transition: 'background-color .5s',
 		},
+		'-webkit-box-shadow': '10px 10px 60px 16px rgba(0,0,0,0.75)',
+		'-moz-box-shadow': '10px 10px 60px 16px rgba(0,0,0,0.75)',
+		boxShadow: '10px 10px 60px 16px rgba(0,0,0,0.75)',
 	},
 	Hide: {
 		bottom: -40,

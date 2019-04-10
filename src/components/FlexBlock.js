@@ -12,6 +12,8 @@ class FlexBlock extends Component {
 				return classes.Block
 			case 'large':
 				return classes.Large
+			case 'even':
+				return classes.EvenNumbers
 			case 'full':
 			case null:
 				return classes.Full
@@ -37,10 +39,11 @@ const styles = {
 	},
 	Large: {
 		flex: 1,
-		minWidth: 400,
+		minWidth: 300,
 		marginLeft: 20,
 		marginRight: 20,
 		'@media (min-width: 1350px)': {
+			minWidth: 400,
 			maxWidth: 500,
 		},
 		'@media (min-width: 800px) and (max-width: 1350px)': {
@@ -50,9 +53,11 @@ const styles = {
 	},
 	Block: {
 		flex: 1,
-		minWidth: 500,
 		marginLeft: 20,
 		marginRight: 20,
+		'@media (min-width: 500px)': {
+			minWidth: 500,
+		},
 	},
 	Small: {
 		flex: 1,
@@ -61,6 +66,22 @@ const styles = {
 		marginRight: 20,
 		'@media (min-width: 1320px)': {
 			maxWidth: 500,
+		},
+	},
+	EvenNumbers: {
+		marginLeft: 20,
+		marginRight: 20,
+		'@media (min-width: 1200px) and (max-width: 1480px)': {
+			minWidth: 500,
+		},
+		'@media (min-width: 450px) and (max-width: 1200px)': {
+			width: 400,
+		},
+		'@media (max-width: 1000px)': {
+			width: 370,
+		},
+		'@media (max-width: 400px)': {
+			margin: 0,
 		},
 	},
 }

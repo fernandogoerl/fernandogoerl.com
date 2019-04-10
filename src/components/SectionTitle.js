@@ -33,6 +33,12 @@ const styles = {
 		'@media (max-width: 800px)': {
 			fontSize: 90,
 		},
+		'@media (max-width: 600px)': {
+			fontSize: 70,
+		},
+		'@media (max-width: 500px)': {
+			fontSize: 50,
+		},
 	},
 	Left: {
 		textAlign: 'left',
