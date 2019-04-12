@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { Route } from 'react-router-dom'
 
 import Home from './pages/Home'
-import Skype from './pages/Skype'
 import Header from './components/Header'
 import BackToTop from './components/BackToTop'
 
@@ -33,8 +32,9 @@ class App extends Component {
 	}
 
 	handleScroll = (event) => {
-			let scroll = document.documentElement.scrollTop
-			this.setState({scroll})
+		const el = document.scrollingElement || document.documentElement
+		let scroll = el.scrollTop
+		this.setState({scroll})
 	}
 
 	setScroll = (scroll) => this.setState({scroll})
@@ -46,7 +46,6 @@ class App extends Component {
       <div className={classes.App}>
         <Header scroll={scroll} />
 				<Route exact path='/' render={() => (<Home/>)}/>
-				<Route path='/skype' component={Skype}/>
 				<BackToTop scroll={scroll}/>
       </div>
     )

@@ -91,11 +91,11 @@ const styles = {
 	},
 	SubText: {
 		paddingTop: 20,
-		paddingBottom: 30,
-		borderBottom: '2px solid '+colors.lightPrimary,
-		marginBottom: 20,
+		marginBottom: 30,
 	},
 	ChannelsContainer: {
+		paddingTop: 20,
+		borderTop: '2px solid '+colors.lightPrimary,
 		display: 'flex',
 		alignItems: 'center',
 		justifyContent: 'space-between',

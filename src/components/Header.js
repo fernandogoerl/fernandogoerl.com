@@ -75,7 +75,7 @@ const styles = {
 		zIndex: 200,
 		position: 'fixed',
 		'@media (max-width: 981px)': {
-			padding: '10 20',
+			padding: '5px 20px',
 		},
 	},
 	AfterScroll: {
