@@ -147,8 +147,8 @@ export const getContacts = () => (
 		res([
 			{
 				Type : 'Mobile phone',
-				Info : '+55 51 99993-3460',
-				Url : 'tel:+5551999933460',
+				Info : '+1 (306) 881-1802',
+				Url : 'tel:+13068811802',
 			},
 			{
 				Type : 'Skype',
